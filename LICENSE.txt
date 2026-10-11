@@ -1,0 +1,10 @@
+Mouse2Yoke v2.0 (BETA)
+Copyright (c) 2026 Capitao Zelker (https://www.youtube.com/@CaptainZelker)
+
+Free to use for personal flight simulation (freeware). 
+You may share the unmodified download, but please link to the official page
+instead of re-uploading it, and do not sell it or present it as your own work.
+Mouse2Yoke is provided "as is", without warranty of any kind. Use at your own risk.
+
+Mouse2Yoke is an independent plugin, inspired by the idea of BetterMouseYoke by
+Torben Koenke (MIT License). It is not affiliated with Laminar Research.
