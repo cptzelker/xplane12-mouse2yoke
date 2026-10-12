@@ -1,61 +1,68 @@
-# Mouse2Yoke v2.0 (BETA)
+# Mouse2Yoke v2.1 (BETA)
 
-**Voe no X-Plane 12 só com o mouse — no Linux e no Windows. Sem joystick, sem vJoy, sem programa extra.**
+**Fly X-Plane 12 with just the mouse - on Linux, Windows and macOS. No joystick, no vJoy, no extra software.**
 
-Por **Capitão Zelker** · YouTube: [@CaptainZelker](https://www.youtube.com/@CaptainZelker)
+By **Capitão Zelker** · YouTube: [@CaptainZelker](https://www.youtube.com/@CaptainZelker)
 
-> ⚠️ **BETA.** Testado pelo autor no Linux (CachyOS) com o Cessna 172. A versão de Windows está incluída, mas ainda não foi testada — seu feedback é muito bem-vindo (abra uma *Issue* aqui no GitHub).
+> **BETA.** Developed on Linux (CachyOS). Validated on Linux and Windows with the Cessna 172, the default 737 and the Zibo 737. The macOS build is **untested** (no Mac was available) - feedback is very welcome, please open an *Issue* here on GitHub.
 
 ---
 
-## O que faz
+## Features
 
-- **Mouse = yoke.** A posição do mouse na tela é a posição do manche (borda da tela = deflexão total).
-- Aparece só uma pequena **cruz +** na tela. A caixinha padrão de mouse do X-Plane é escondida automaticamente.
-- **Segurar o botão esquerdo = rudder.** Mexa o mouse para os lados (as duas barras verdes mostram o curso). Ao soltar, o rudder volta ao neutro.
-- **Curva coordenada:** no ar, o rudder acompanha o roll de leve e a bolinha fica no centro (sem precisar de pedais).
-- **Taxiar com o mouse:** no solo, mexer o mouse para os lados esterça a roda do nariz. O efeito some entre 15 e 40 kt para não atrapalhar a corrida de decolagem.
-- **Liga/desliga com uma tecla.** Ao desligar, o manche **fica exatamente onde estava**, como se você o segurasse com a mão (a curva continua). Ao ligar de novo não há tranco: uma cruz **amarela** mostra onde o manche está, e o mouse assume quando você passa por ela.
-- O botão direito continua olhando em volta normalmente.
+- **Mouse = yoke.** Mouse position on screen = yoke position (screen edge = full deflection).
+- Only a small **+ crosshair** is drawn. X-Plane's default mouse-yoke box is hidden automatically.
+- **Hold the left button = rudder.** Move the mouse sideways (two green bars show the travel). Release and the rudder returns to neutral.
+- **Coordinated turns:** in the air the rudder follows the roll gently, so the ball stays centered - no pedals needed.
+- **Taxi with the mouse:** on the ground, moving the mouse sideways steers the nose wheel through the rudder (fades out between 15 and 40 kt).
+- **One key toggles it.** Switching OFF leaves the yoke exactly where it was, as if you were holding it by hand. Switching ON causes no jump: a **yellow +** shows where the yoke is, and the mouse takes over when you move onto it.
+- The right button still looks around.
+- **New in 2.1 - optional Tiller mode (taxi only):** a second key switches to a nose-wheel tiller. Only the nose wheel is controlled (up to 60 degrees), so big airliners can turn sharply; ailerons, elevator and rudder are left alone. Flight mode and tiller mode are exclusive - turning one on turns the other off. The tiller is refused in flight and above 45 kt (an on-screen message tells you) and switches itself off if you pass 45 kt.
 
-## Requisitos
+## Install
 
-X-Plane 12 · Windows 64 bits ou Linux 64 bits (qualquer distribuição recente). macOS ainda não está incluído.
-
-## Instalação
-
-1. Baixe o **`Mouse2Yoke_v2.0_BETA.zip`** na página de [Releases](../../releases).
-2. Extraia o zip e copie a pasta **`Mouse2Yoke`** para dentro de `X-Plane 12/Resources/plugins/`.
-   Deve ficar assim:
+1. Download **`Mouse2Yoke_v2.1_BETA.zip`** from the [Releases](../../releases) page.
+2. Extract it and copy the **`Mouse2Yoke`** folder into `X-Plane 12/Resources/plugins/`. You should end up with:
    - Linux: `Resources/plugins/Mouse2Yoke/lin_x64/Mouse2Yoke.xpl`
    - Windows: `Resources/plugins/Mouse2Yoke/win_x64/Mouse2Yoke.xpl`
-3. Abra o X-Plane 12. Vá em **Settings → Keyboard**, procure **"Mouse2Yoke: toggle mouse yoke control"** e atribua uma tecla (por exemplo, **Y**).
-4. Carregue um avião, aperte a tecla e voe com o mouse.
+   - macOS: `Resources/plugins/Mouse2Yoke/mac_x64/Mouse2Yoke.xpl`
+3. Start X-Plane 12. Go to **Settings > Keyboard**, find **"Mouse2Yoke: toggle mouse yoke control"** and assign a key (for example **Y**).
+4. Optional: assign another key (for example **U**) to **"Mouse2Yoke: toggle nose-wheel tiller (optional, taxi only)"**, listed right below the main command.
+5. Load an aircraft, press the key and fly with the mouse.
+
+**macOS only:** the plugin is not signed, so macOS may block it after download. Open Terminal and run (adjust the path):
+
+```
+xattr -dr com.apple.quarantine "/path/to/X-Plane 12/Resources/plugins/Mouse2Yoke"
+```
+
+Requirements: X-Plane 12 on 64-bit Windows, 64-bit Linux (any recent distribution) or macOS 11+ (Intel and Apple Silicon).
 
 ## Menu
 
-**Plugins → Mouse2Yoke** liga/desliga: mouse yoke, coordenação automática de rudder, direção da roda do nariz no solo, soltar e centrar o manche, e recarregar o `settings.ini`.
+**Plugins > Mouse2Yoke** switches on/off: mouse yoke, automatic rudder coordination, nose-wheel steering on the ground, tiller mode, release and re-center the yoke, and reload `settings.ini`.
 
-## Ajustes
+## Settings
 
-Tudo pode ser ajustado no arquivo `Mouse2Yoke/settings.ini` (todos os itens estão comentados). Depois de editar, use *Plugins → Mouse2Yoke → Reload settings.ini*. Os mais úteis:
+Everything is in `Mouse2Yoke/settings.ini` (every option is commented). After editing, use *Plugins > Mouse2Yoke > Reload settings.ini*. The most useful ones:
 
-| Opção | Para que serve |
+| Option | What it does |
 |---|---|
-| `coord_gain` | Quanto de rudder nas curvas (aumente se a bolinha escapar para fora) |
-| `taxi_gain` | Força da direção no solo |
-| `rudder_distance` | Quanto o mouse precisa andar para rudder total |
-| `deadzone` / `expo` | Zona morta e suavização no centro |
-| `invert_pitch` | Inverte o pitch |
-| `crosshair_size` | Tamanho da cruz |
+| `coord_gain` | How much rudder in turns (raise it if the ball slips to the outside) |
+| `taxi_gain` | Strength of rudder steering on the ground |
+| `tiller_max_deg` | Maximum nose-wheel angle in tiller mode |
+| `rudder_distance` | Mouse travel needed for full rudder |
+| `deadzone` / `expo` | Dead zone and softness around the center |
+| `invert_pitch` | Inverts pitch |
+| `crosshair_size` | Size of the crosshair |
 
-## Observações
+## Notes
 
-- Com o mouse yoke **ligado**, o botão **esquerdo** pertence ao plugin (rudder). Para clicar no cockpit, desligue com a tecla — o manche continua onde estava.
-- Se algo não funcionar, mande o `Log.txt` da pasta do X-Plane (procure as linhas que começam com `[Mouse2Yoke]`).
+- While mouse yoke is **on**, the **left** button belongs to the plugin (rudder). To click cockpit switches, toggle it off - the yoke stays where it was.
+- If something does not work, send the lines starting with `[Mouse2Yoke]` from X-Plane's `Log.txt`.
 
 ---
 
-📺 Um guia completo em vídeo vem no canal: [youtube.com/@CaptainZelker](https://www.youtube.com/@CaptainZelker)
+Video guide coming to the channel: [youtube.com/@CaptainZelker](https://www.youtube.com/@CaptainZelker)
 
-*A ideia foi inspirada no BetterMouseYoke, de Torben Könke (X-Plane 11). O Mouse2Yoke é um plugin novo e independente, escrito do zero para o X-Plane 12, sem ligação com o original. Sem ligação com a Laminar Research.*
+*Inspired by BetterMouseYoke (X-Plane 11) by Torben Könke. Mouse2Yoke is a new, independent plugin written from scratch for X-Plane 12, not derived from the original. Not affiliated with Laminar Research.*
