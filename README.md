@@ -68,6 +68,6 @@ Everything is in `Mouse2Yoke/settings.ini` (every option is commented). After ed
 
 ---
 
-Video guide coming to the channel: [youtube.com/@CaptainZelker](https://www.youtube.com/@CaptainZelker)
+Video guide here: [youtube.com/@CaptainZelker](https://www.youtube.com/@CaptainZelker)
 
 *Inspired by BetterMouseYoke (X-Plane 11) by Torben Könke. Mouse2Yoke is a new, independent plugin written from scratch for X-Plane 12, not derived from the original. Not affiliated with Laminar Research.*
