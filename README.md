@@ -1,4 +1,4 @@
-# Mouse2Yoke v2.1 (BETA)
+# Mouse2Yoke v2.2 (BETA)
 
 **Fly X-Plane 12 with just the mouse - on Linux, Windows and macOS. No joystick, no vJoy, no extra software.**
 
@@ -21,14 +21,15 @@ By **Capitão Zelker** · YouTube: [@CaptainZelker](https://www.youtube.com/@Cap
 
 ## Install
 
-1. Download **`Mouse2Yoke_v2.1_BETA.zip`** from the [Releases](../../releases) page.
+1. Download **`Mouse2Yoke_v2.2_BETA.zip`** from the [Releases](../../releases) page.
 2. Extract it and copy the **`Mouse2Yoke`** folder into `X-Plane 12/Resources/plugins/`. You should end up with:
    - Linux: `Resources/plugins/Mouse2Yoke/lin_x64/Mouse2Yoke.xpl`
    - Windows: `Resources/plugins/Mouse2Yoke/win_x64/Mouse2Yoke.xpl`
    - macOS: `Resources/plugins/Mouse2Yoke/mac_x64/Mouse2Yoke.xpl`
 3. Start X-Plane 12. Go to **Settings > Keyboard**, find **"Mouse2Yoke: toggle mouse yoke control"** and assign a key (for example **Y**).
 4. Optional: assign another key (for example **U**) to **"Mouse2Yoke: toggle nose-wheel tiller (optional, taxi only)"**, listed right below the main command.
-5. Load an aircraft, press the key and fly with the mouse.
+5. Optional: assign a key to **"Mouse2Yoke: release and re-center yoke (optional)"** to let the yoke ease back to neutral at any time (same as the menu item).
+6. Load an aircraft, press the key and fly with the mouse.
 
 **macOS only:** the plugin is not signed, so macOS may block it after download. Open Terminal and run (adjust the path):
 
@@ -37,6 +38,10 @@ xattr -dr com.apple.quarantine "/path/to/X-Plane 12/Resources/plugins/Mouse2Yoke
 ```
 
 Requirements: X-Plane 12 on 64-bit Windows, 64-bit Linux (any recent distribution) or macOS 11+ (Intel and Apple Silicon).
+
+## Takeoff and landing roll
+
+Above about 40 kt on the ground the mouse no longer steers automatically. To keep the centerline, put the mouse in the center of the screen (so the ailerons stay level), **hold the left mouse button** and move the mouse sideways: that is the manual rudder. Release to return it to neutral.
 
 ## Menu
 
@@ -63,8 +68,6 @@ Everything is in `Mouse2Yoke/settings.ini` (every option is commented). After ed
 
 ---
 
-- Video guide and presentation (English): https://youtu.be/-8XMg17xlDg?si=_CTSgY20rEgvcga2
-
-- Video Tutorial e Apresentação (Português-Brasil): https://youtu.be/BEou1FPSKXY?si=EdYAQJj99fjxi_kw
+Video guide coming to the channel: [youtube.com/@CaptainZelker](https://www.youtube.com/@CaptainZelker)
 
 *Inspired by BetterMouseYoke (X-Plane 11) by Torben Könke. Mouse2Yoke is a new, independent plugin written from scratch for X-Plane 12, not derived from the original. Not affiliated with Laminar Research.*
